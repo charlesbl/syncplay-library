@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 });
 
 const httpServer = app.listen(PORT, () => {
-    console.log(`Server started at http://${ADDRESS}:${PORT}?secret=arz`);
+    console.log(`Server started at http://${ADDRESS}:${PORT}?secret=${SECRET}`);
 });
 
 
