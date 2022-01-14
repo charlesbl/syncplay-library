@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  syncplay-library:
+    image: syncplay-library
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+      ADDRESS: localhost
+      PORT: 8080
+      SECRET: pass
+    ports:
+      - 8080:8080
+    volumes:
+      - /home/charles/Pictures:/files:ro
