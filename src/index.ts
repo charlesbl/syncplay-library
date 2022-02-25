@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     if (req.query.secret === SECRET) {
         next();
     } else {
-        res.status(404).send('404');
+        res.status(418).send("I'm a teapot.");
     }
 });
 
